@@ -1,0 +1,260 @@
+/*
+Theme Name: Twenty Twelve Dev
+Theme URI: http://wordpress.org/extend/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
+Last Modified:OSton Better
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+/* Common Style */
+.feat{
+	background:#EEEEEE;
+}
+
+.title-line{
+	padding-top:0;
+	margin-top:0
+}
+.normal-line{
+	padding:0;
+	margin:0
+}
+
+a,a:hover,a:focus{
+	text-decoration:none;
+}
+
+/* Widget */
+.widget .widget-title{
+	font-size:14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #636363;	
+}
+
+/* Copyright */
+#copyright{
+	font-size:14px
+	font-size:1rem;
+	text-align:center;
+}
+
+/* Author profiles */
+.author-info {
+	/*border-top: 1px solid #ededed;*/
+	/*margin: 24px 0;*/
+	padding-top:0px 10px;
+	overflow: hidden;
+}
+.author-avatar {
+	float: left;
+	width:15%;
+}
+.author-description {
+	float: right;
+	width: 85%;
+}
+.author-description p {
+	color: #757575;
+	line-height: 1.6;
+}
+.author-avatar img{
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Comments */
+.comments-title {
+	margin: 24px 0px;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: normal;
+}
+.comments-area ol{
+	list-style-type:none;
+}
+.comments-area article {
+	margin: 24px 0;
+}
+.comments-area article header {
+	overflow: hidden;
+	position: relative;
+}
+.comments-area article header img {
+	float: left;
+	padding: 0;
+	line-height: 0;
+}
+.comments-area article header cite,
+.comments-area article header time {
+	display: block;
+	margin-left: 85px;
+}
+.comments-area article header cite {
+	font-style: normal;
+	font-size: 15px;
+	line-height: 1.42857143;
+}
+.comments-area article header time {
+	line-height: 1.714285714;
+	text-decoration: none;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	color: #5e5e5e;
+}
+.comments-area article header a {
+	text-decoration: none;
+}
+.comments-area article header cite a:hover {
+	text-decoration: none;
+}
+.comments-area li.bypostauthor cite span {
+	position: absolute;
+	margin-left: 5px;
+	padding: 2px 5px;
+	font-size: 10px;
+}
+a.comment-reply-link,
+a.comment-edit-link {
+	line-height: 1.846153846;
+}
+a.comment-reply-link:hover,
+a.comment-edit-link:hover {
+	color: #21759b;
+}
+.commentlist .pingback {
+	line-height: 1.714285714;
+	margin-bottom: 24px;
+}
+
+/* Comment form */
+#respond {
+	margin-top: 48px;
+}
+#respond h3#reply-title {
+	font-size: 16px;
+	line-height: 1.5;
+
+}
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-left: 10px;
+	font-weight: normal;
+}
+#respond form {
+	margin: 24px 0;
+}
+#respond form p {
+	margin: 5px 0;
+}
+#respond form p.logged-in-as {
+	margin-bottom: 24px;
+}
+#respond form label {
+	display: block;
+}
+#respond form input[type="text"],
+#respond form textarea {
+	width: 100%;
+}
+#respond form input[type="text"] {
+	width: 46%;
+}
+#respond form p.form-allowed-tags {
+	margin: 0;
+	font-size: 12px;
+	line-height: 2;
+	color: #5e5e5e;
+}
+#respond form p.form-allowed-tags code{
+	white-space:normal;
+}
+.required {
+	color: red;
+}
+
+
+/* Page */
+.nav-previous,
+.previous-image {
+	float: left;
+	width: 50%;
+}
+.nav-next,
+.next-image {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+
+
+/* Back to top */
+#gotop{
+	width:100px;
+	height:36px;
+	position:fixed;
+	bottom:0px;
+	font-weight:bold;
+	text-align:center;
+	color:#0E90D2;
+	left:1px;
+	top:auto;
+	display:block;
+	cursor:pointer;
+	line-height:2.65;
+	background:#111111;
+}
+
+*html #gotop{
+	position:absolute;
+	bottom:auto; top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
